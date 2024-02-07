@@ -39,7 +39,14 @@ const MainGrid = () => {
             <p>공유하고 거래하는</p>
           </div>
           <div className={styles.firstImageWrap}>
-            <Image src={dogImg} alt="image" width={600} height={600} className={styles.image} />
+            <Image
+              src={dogImg}
+              alt="image"
+              width={600}
+              height={600}
+              className={styles.image}
+              priority
+            />
           </div>
         </motion.div>
       </div>

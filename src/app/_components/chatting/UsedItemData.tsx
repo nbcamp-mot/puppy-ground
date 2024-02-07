@@ -19,7 +19,7 @@ const UsedItemData = ({
         <div className={styles.usedItemTitle}>
           <p className={styles.title}>{usedItem?.title}</p>
           <p className={usedItem?.sold_out ? styles.soldOut : styles.sell}>
-            {usedItem?.sold_out ? '' : '판매중'}
+            {usedItem?.sold_out ? '판매완료' : '판매중'}
           </p>
         </div>
         <div className={styles.usedItemPrice}>

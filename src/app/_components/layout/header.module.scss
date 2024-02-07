@@ -2,7 +2,10 @@
   margin: 0 auto;
   background-color: white;
 }
-
+.loading {
+  height: 100px;
+  background-color: white;
+}
 .navbarBox {
   max-width: var(--max-width);
   display: flex;

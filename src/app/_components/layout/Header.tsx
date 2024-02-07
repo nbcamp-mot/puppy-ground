@@ -178,15 +178,11 @@ const Header = () => {
     setisLoading(false);
   }, []);
 
-  if (isLoading) return <Loading />;
-
-  if (!isAuthInitialized) {
-    return null;
-  }
-
   return (
     <>
-      {!isLoading && (
+      {isLoading ? (
+        <div className={styles.loading}></div>
+      ) : (
         <>
           <div className={styles.container}>
             <div className={styles.navbarBox}>
