@@ -6,7 +6,13 @@
   justify-content: center;
   flex-direction: column;
   z-index: 1;
+  overflow: hidden;
 }
+
+// .header {
+//   height: 100px;
+//   width: 100%;
+// }
 
 .firstContainer {
   width: 90vw;

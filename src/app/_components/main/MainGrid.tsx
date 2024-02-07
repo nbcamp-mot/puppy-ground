@@ -16,6 +16,7 @@ import { motion } from 'framer-motion';
 const MainGrid = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.header}></div>
       <div className={styles.firstContainer}>
         <motion.div
           className={styles.firstSection}
