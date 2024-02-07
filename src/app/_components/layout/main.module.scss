@@ -1,6 +1,7 @@
 .main {
-  max-width: var(--max-width);
   padding: 3rem 0;
+  max-width: var(--max-width);
+  min-height: 100dvh;
   margin: 0 auto;
 
   h2 {
