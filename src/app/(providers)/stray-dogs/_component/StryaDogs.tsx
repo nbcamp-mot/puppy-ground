@@ -18,6 +18,7 @@ import NoSearchValue from './NoSearchValue';
 import { Main } from '@/app/_components/layout';
 import { useCityAndGu } from '@/hooks/stray-dog/useCityAndGu';
 import useFilterStrayList from '@/hooks/stray-dog/useStrayListFilter';
+import Error from './Error';
 
 const StrayDogs = () => {
   const { selectCity, selectGu, cityChangeHandler, guChangeHandler } = useCityAndGu();
@@ -71,7 +72,7 @@ const StrayDogs = () => {
   }
 
   if (isError) {
-    return <div>🙇🏻‍♀️오류가 발생하였습니다🙇🏻‍♀️</div>;
+    return <Error />;
   }
 
   return (
