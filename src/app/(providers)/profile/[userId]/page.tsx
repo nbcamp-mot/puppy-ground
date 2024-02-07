@@ -1,4 +1,3 @@
-import PrivateRouteWrapper from '@/shared/PrivateRouteWrapper';
 import Profile from '../_components/Profile';
 import List from '../_components/List';
 import styles from './page.module.scss';

@@ -24,7 +24,9 @@ export type Inputs = {
 const SignUp = () => {
   const supabase = createClientComponentClient<Database>();
   const setUser = useAuth((state) => state.setUser);
-  const [previewImg, setPreviewImg] = useState<string>(defaultAvatar.src!);
+  const [previewImg, setPreviewImg] = useState<string>(
+    'https://hcrhbxcasvjdyigarqal.supabase.co/storage/v1/object/public/default_profile/my_page_default.webp'
+  );
   const { successTopRight, errorTopRight } = useToast();
   const [isEmailValid, setIsEmailValid] = useState<boolean>(false);
   const [isNicknameValid, setIsNicknameValid] = useState<boolean>(false);
@@ -121,7 +123,8 @@ const SignUp = () => {
       return false;
     }
 
-    let imgUrl = defaultAvatar.src;
+    let imgUrl =
+      'https://hcrhbxcasvjdyigarqal.supabase.co/storage/v1/object/public/default_profile/my_page_default.webp';
     if (data.image[0]) {
       const { data: imgData, error } = await supabase.storage
         .from('profile_avatar')
@@ -245,15 +248,14 @@ const SignUp = () => {
 
         <label htmlFor="preview">
           <Image
+            src={previewImg}
             alt="이미지 없음"
             width={300}
             height={300}
             className={styles.previewImg}
-            src={previewImg}
           />
           <input
             className={styles.imageInput}
-            // defaultValue={defaultAvatar}
             type="file"
             accept="image/*"
             id="preview"

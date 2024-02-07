@@ -33,8 +33,6 @@ const Header = () => {
   const user = useAuth((state) => state.user);
   const [showMessageList, setShowMessageList] = useState<boolean>(false);
   const setUser = useAuth((state) => state.setUser);
-  const isAuthInitialized = useAuth((state) => state.isAuthInitialized);
-  const setIsAuthInitialized = useAuth((state) => state.setIsAuthInitialized);
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isModalOpen, setModalIsOpen] = useState<boolean>(false);
   const [isLoading, setisLoading] = useState<boolean>(true);
@@ -65,10 +63,6 @@ const Header = () => {
         setUser(session.user);
       } else {
         setUser(null);
-      }
-
-      if (!isAuthInitialized) {
-        setIsAuthInitialized(true);
       }
     });
   }, []);
