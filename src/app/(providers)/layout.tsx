@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 import { ToastContainer } from 'react-toastify';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Footer, Header } from '../_components/layout';
+import HeaderLoading from '../_components/layout/loading/HeaderLoading';
 
 function ProvidersLayout({
   children,
@@ -14,7 +15,7 @@ function ProvidersLayout({
   return (
     <ReactQueryProviders>
       <ReactQueryDevtools initialIsOpen={false} />
-      <Suspense>
+      <Suspense fallback={<HeaderLoading />}>
         <Header />
       </Suspense>
       {children}
